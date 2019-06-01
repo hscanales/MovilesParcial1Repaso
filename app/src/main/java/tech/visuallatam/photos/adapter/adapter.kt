@@ -31,7 +31,8 @@ class adapter(var fotos:List<photo>): RecyclerView.Adapter<adapter.ViewHolder>()
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bind(foto : photo) = with(itemView){
             this.autor.text=foto.author
-            Glide.with(this).load(foto.download_ulr).into(image)
+            Glide.with(this).load(foto.download_ulr).override(2048,1206)
+                .into(image)
 
         }
     }

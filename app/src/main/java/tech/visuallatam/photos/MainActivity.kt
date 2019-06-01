@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         viewModel.todos().observe(this, Observer{
             adapter.updateList(it)
         })
-
+        button.setOnClickListener {
+            viewModel.getstuff()
+        }
     }
 }
